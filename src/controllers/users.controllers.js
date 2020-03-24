@@ -38,8 +38,6 @@ userController.signUp = async (req, res) => {
             res.redirect('/users/signin'); 
         }
     }
-    
-
 };
 
 userController.renderSignInForm = (req, res) => {
