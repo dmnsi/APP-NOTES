@@ -38,12 +38,13 @@ notesController.updateNotes = async (req, res) => {
 }
 
 notesController.deleteNotes = async (req, res) => {
-    await Note.findByIdAndDelete(req.params.id);
+    const note = await Note.findByIdAndDelete(req.params.id);
     if (note.user != req.user.id){
         req.flash('error_msg', 'Not authorized');
     }
     req.flash('success_msg', 'Note Deleted Successfully');
     res.redirect('/notes');
 }
+
 
 module.exports = notesController;

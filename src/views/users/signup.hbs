@@ -2,23 +2,43 @@
     <div class="col-md-4 mx-auto">
         <div class="card">
             <div class="card-header">
-                Account Register
+                <h3><strong>Account Register</strong></h3>
             </div>
             <div class="card-body">
+                <strong>Account info</strong>
                 <form action="/users/signup" method="POST">
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" placeholder="Name" value="{{name}}">
                     </div>
                     <div class="form-group">
+                        <input type="text" class="form-control" name="lastname" placeholder="Last Name"
+                            value="{{lastname}}">
+                    </div>
+                    <div class="form-group">
                         <input type="email" class="form-control" name="email" placeholder="Email" value="{{email}}">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Password" value="{{password}}">
+                        <input type="password" class="form-control" name="password" placeholder="Password"
+                            value="{{password}}">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" value="{{confirm_password}}">
+                        <input type="password" class="form-control" name="confirm_password"
+                            placeholder="Confirm Password" value="{{confirm_password}}">
                     </div>
-                    <button class="btn btn-primary btn-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="phone" placeholder="Phone" value="{{phone}}">
+                    </div>
+                    <strong>Adress info</strong>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="city" placeholder="City" value="{{city}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="street" placeholder="Street" value="{{street}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="number" placeholder="N°" value="{{number}}">
+                    </div>
+                    <button class="btn btn-success btn-block">
                         Sign Up
                     </button>
                 </form>

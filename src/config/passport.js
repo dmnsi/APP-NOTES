@@ -11,12 +11,12 @@ passport.use(new LocalStrategy({
     // Match Email's User
     const user = await User.findOne({email});
 
-    if(!user){
+    if(!user) {
         return done(null, false, {message: 'Not user found'});
     } else {
         // Match password's user
-        const match = await user.matchPassword(password);
-        if (match){
+        const matchuser = await user.matchPassword(password);
+        if (matchuser){
             return done(null, user);
         } else {
             return done(null, false, {message: 'Incorrect password'});

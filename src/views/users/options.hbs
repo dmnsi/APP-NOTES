@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div align="center" class="card-header">
+                Options
+            </div>
+            <div class="card-body">
+                    <a class="btn btn-sm btn-block btn-danger" href="/users/changepassword">Change password</a>
+                <br>
+                <form action="/users/{{user.id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-sm btn-block">
+                        Delete account
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

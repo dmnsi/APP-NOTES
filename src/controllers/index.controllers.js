@@ -8,5 +8,9 @@ indexController.renderAbout = (req, res) => {
     res.render('about')
 };
 
+indexController.renderContact = (req, res) => {
+    res.render('contact')
+};
+
 
 module.exports = indexController;
